@@ -46,6 +46,7 @@ km("v", "K", ":m '<-2<CR>gv=gv")
 --telescope
 km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
 km("n", "<leader>fg", "<cmd> Telescope git_status <cr>", opt)
+km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)
 km("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", opt)
 km("n", "<leader>fs", "<cmd> Telescope live_grep <cr>", opt)
 km("n", "<leader>fc", "<cmd> Telescope colorscheme <cr>", opt)
