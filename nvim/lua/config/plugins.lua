@@ -68,11 +68,14 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
+  use { "nvim-neorg/neorg", config = function() require('neorg').setup{load = orgConfig}end,run = ":Neorg sync-parsers",}
+  -- use{'vimwiki/vimwiki', config = function() vim.g.vimwiki_list = {{path = '~/.notes',syntax = 'markdown',ext = '.md',}}end}
   --Themes
   use "morhetz/gruvbox"
   use "olivercederborg/poimandres.nvim"
   use "xero/miasma.nvim"
   use "jalzn/altbox.nvim"
   use "luisiacc/gruvbox-baby"
+  use "katawful/kat.nvim"
 
 end)

@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/brinq/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["kat.nvim"] = {
+    loaded = true,
+    path = "/Users/brinq/.local/share/nvim/site/pack/packer/start/kat.nvim",
+    url = "https://github.com/katawful/kat.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/brinq/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -163,6 +168,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brinq/.local/share/nvim/site/pack/packer/start/miasma.nvim",
     url = "https://github.com/xero/miasma.nvim"
+  },
+  neorg = {
+    config = { "\27LJ\2\nQ\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0=\3\5\2B\0\2\1K\0\1\0\tload\14orgConfig\1\0\0\nsetup\nneorg\frequire\0" },
+    loaded = true,
+    path = "/Users/brinq/.local/share/nvim/site/pack/packer/start/neorg",
+    url = "https://github.com/nvim-neorg/neorg"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -232,6 +243,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neorg
+time([[Config for neorg]], true)
+try_loadstring("\27LJ\2\nQ\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0006\3\4\0=\3\5\2B\0\2\1K\0\1\0\tload\14orgConfig\1\0\0\nsetup\nneorg\frequire\0", "config", "neorg")
+time([[Config for neorg]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
