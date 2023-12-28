@@ -1,1 +1,1 @@
-vim.cmd("colorscheme altbox")
+vim.cmd("colorscheme gruvbox")
