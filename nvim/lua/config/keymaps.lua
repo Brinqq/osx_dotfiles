@@ -43,6 +43,10 @@ km("v", "K", ":m '<-2<CR>gv=gv")
 
 -------Plugin maps-----------------
 
+--Trouble
+km("n", "<leader>xf", function() require('trouble').toggle("document_diagnostics") end)
+
+
 --gitsigns
 
 --telescope
