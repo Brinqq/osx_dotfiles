@@ -1,11 +1,13 @@
+require("harpoon")
+
 --Aliases
 local opt = {noremap = true, silent = true}
 local termOpts = {silent = true}
 local km = vim.keymap.set
 
-require("harpoon")
 
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 km("n", "<leader>pv", vim.cmd.Ex)
 
