@@ -1,5 +1,4 @@
 require "config.options"
-require "config.org"
 require "config.plugins"
 require "config.keymaps"
 require "config.theme"
