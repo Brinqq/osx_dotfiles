@@ -71,11 +71,18 @@ return require('packer').startup(function(use)
   use {'folke/trouble.nvim'}
   use {'nvim-orgmode/orgmode', config = function()require('orgmode').setup{}end}
   --Themes
+  use "biscuit-colorscheme/nvim"
+  use "srcery-colors/srcery-vim"
+  use "ajmwagar/vim-deus"
+  use "sainnhe/sonokai"
+  use "ku1ik/vim-monokai"
+  use "tomasr/molokai"
+  use "sebasruiz09/fizz.nvim"
+  use "ricardoraposo/gruvbox-minor.nvim"
+  use "sainnhe/gruvbox-material"
   use "morhetz/gruvbox"
-  use "olivercederborg/poimandres.nvim"
   use "xero/miasma.nvim"
   use "jalzn/altbox.nvim"
   use "luisiacc/gruvbox-baby"
-  use "katawful/kat.nvim"
 
 end)
