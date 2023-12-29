@@ -69,8 +69,6 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
   use {'folke/trouble.nvim'}
-  use { "nvim-neorg/neorg", config = function() require('neorg').setup{load = orgConfig}end,run = ":Neorg sync-parsers",}
-  -- use{'vimwiki/vimwiki', config = function() vim.g.vimwiki_list = {{path = '~/.notes',syntax = 'markdown',ext = '.md',}}end}
   --Themes
   use "morhetz/gruvbox"
   use "olivercederborg/poimandres.nvim"
