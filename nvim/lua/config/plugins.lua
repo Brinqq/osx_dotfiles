@@ -69,6 +69,7 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
   use {'folke/trouble.nvim'}
+  use {'nvim-orgmode/orgmode', config = function()require('orgmode').setup{}end}
   --Themes
   use "morhetz/gruvbox"
   use "olivercederborg/poimandres.nvim"
