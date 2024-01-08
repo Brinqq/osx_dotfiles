@@ -85,4 +85,8 @@ return require('packer').startup(function(use)
   use "jalzn/altbox.nvim"
   use "luisiacc/gruvbox-baby"
 
+
+  --optional
+    use "ThePrimeagen/vim-be-good"
+
 end)

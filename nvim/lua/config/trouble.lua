@@ -1,5 +1,6 @@
 require('trouble').setup{
-  position = "bottom",
+  position = "right",
+  width = 75,
   action_keys = {
 
   },
