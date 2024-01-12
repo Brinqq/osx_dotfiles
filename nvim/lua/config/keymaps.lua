@@ -11,14 +11,6 @@ vim.g.maplocalleader = ","
 
 km("n", "<leader>pv", vim.cmd.Ex)
 
-km("v", "J", ":m'>+1<CR>gv=gv")
-km("v", "K", ":m'<-2<CR>gv=gv")
-
---window nav
--- km("n", "<C-h>", "<C-w>h", opt)
--- km("n", "<C-l>", "<C-w>l", opt)
--- km("n", "<C-k>", "<C-w>k", opt)
--- km("n", "<C-j>", "<C-w>j", opt)
 
 --resize window
 km("n", "<C-Up>", ":resize +2<CR>", opt)
@@ -51,6 +43,7 @@ km("n", "<leader>xf", function() require('trouble').toggle("document_diagnostics
 --gitsigns
 
 --telescope
+km("n", "<C-p>", "<cmd> Telescope git_files <cr>", opt)
 km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
 km("n", "<leader>fg", "<cmd> Telescope git_status <cr>", opt)
 km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)

@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
   use {'folke/trouble.nvim'}
-  use {'nvim-orgmode/orgmode', config = function()require('orgmode').setup{}end}
   --Themes
   use "biscuit-colorscheme/nvim"
   use "srcery-colors/srcery-vim"
