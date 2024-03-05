@@ -1,14 +1,14 @@
 --short map
 o = vim.opt
 
-o.termguicolors = true  --set term gui colors
-o.relativenumber = true --relative side number
-o.tabstop = 2           --tab jump width
-o.shiftwidth = 2 
+o.termguicolors = true  -- Sets term gui colors
+o.number = true         -- Sets numbers on
+o.relativenumber = true -- Sets relative line number
+o.tabstop = 2           -- Sets tab jump width
+o.shiftwidth = 2
 o.softtabstop = 2
 o.expandtab = true
 o.cmdheight = 3
-o.number = true        --set numbers
 o.hlsearch = true
 o.incsearch = true
 o.ignorecase = true
@@ -18,6 +18,5 @@ o.splitright = true
 o.numberwidth = 4
 o.wrap = false
 
+
 vim.cmd"set matchpairs="
-
-

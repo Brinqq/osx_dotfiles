@@ -26,21 +26,20 @@ packer.init{
 
 }
 
-return require('packer').startup(function(use)   
-	
+return require('packer').startup(function(use)
+
   -------plugins-----
   --packer-------------------
   use "wbthomason/packer.nvim"
 	use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
 ------------------------------
+-- commit = "b0395c2",
 
-  use{ 
+  use{
     'nvim-telescope/telescope.nvim',
-    commit = "b0395c2",
   }
   use "nvim-telescope/telescope-media-files.nvim"
-  
   --cmp and snippets
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
@@ -48,10 +47,10 @@ return require('packer').startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "saadparwaiz1/cmp_luasnip"
   use "L3MON4D3/LuaSnip"
-  use "rafamadriz/friendly-snippets"   
+  use "rafamadriz/friendly-snippets"
   --lsp 
   use "neovim/nvim-lspconfig"
- 
+
   --use "williamboman/nvim-lsp-installer"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
