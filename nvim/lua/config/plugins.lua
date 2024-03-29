@@ -67,6 +67,7 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
+  use 'michaelrommel/nvim-silicon'
   use {'folke/trouble.nvim'}
   --Themes
   use "biscuit-colorscheme/nvim"

@@ -22,8 +22,8 @@ km("n", "<C-Right>", ":vertical resize -2<CR>", opt)
 -- key optimization
 km("n", "<n>", "nzzzv", opt)
 km("n", "<N>", "Nzzzv", opt)
-km("n", "<C-d>", "<C-d>zz", opt)
-km("n", "<C-u>", "<C-u>zz", opt)
+km("n", "J", "<C-d>zz", opt)
+km("n", "K", "<C-u>zz", opt)
 km("x", "<leader>p", "\"_dP", opt)
 
 --move visual block vertically and horizontaly
@@ -37,7 +37,7 @@ km("v", "L", ">gv", opt)
 -------Plugin maps-----------------
 
 --Trouble
-km("n", "'", function() require('trouble').toggle("document_diagnostics") end)
+km("n", ".", function() require('trouble').toggle("document_diagnostics") end)
 
 
 --telescope
@@ -51,4 +51,7 @@ km("n", "<leader>fc", "<cmd> Telescope colorscheme <cr>", opt)
 
 --nvim-tree
 km("n", "<leader>e",  ":NvimTreeToggle<cr>", opt)
+
+--theme
+km("n", "<leader>rb","<cmd> lua rb() <CR>", opt)
 

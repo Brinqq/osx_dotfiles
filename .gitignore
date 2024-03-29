@@ -1,0 +1,12 @@
+kitty-themes/
+nvim/plugin/
+.DS_Store
+QtProject/
+firefox-css/
+iterm2/
+neofetch/
+sketchybar/
+skhd/
+yabai/
+zsh/
+
