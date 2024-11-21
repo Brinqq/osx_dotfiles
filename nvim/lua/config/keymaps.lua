@@ -8,8 +8,6 @@ local km = vim.keymap.set
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-km("n", "<leader>pv", vim.cmd.Ex)
-
 -- Copy to system clip board
 km("v", "<leader>y", "\"+y")
 
@@ -25,6 +23,7 @@ km("n", "<N>", "Nzzzv", opt)
 km("n", "J", "<C-d>zz", opt)
 km("n", "K", "<C-u>zz", opt)
 km("x", "<leader>p", "\"_dP", opt)
+km("n", ".", "<cmd> noh<cr>", opt)
 
 --move visual block vertically and horizontaly
 km("v", "J", ":m '>+1<CR>gv=gv")
@@ -34,16 +33,17 @@ km("v", "L", ">gv", opt)
 
 --quick replace current word
 
+--imporved mark keybinds
+
 -------Plugin maps-----------------
 
 --Trouble
-km("n", ".", function() require('trouble').toggle("document_diagnostics") end)
+-- km("n", ".", function() require('trouble').toggle("document_diagnostics") end)
 
 
 --telescope
 km("n", "L", "<cmd> Telescope git_files <cr>", opt)
 km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
-km("n", "<leader>fg", "<cmd> Telescope git_status <cr>", opt)
 km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)
 km("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", opt)
 km("n", "<leader>fs", "<cmd> Telescope live_grep <cr>", opt)

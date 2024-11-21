@@ -34,12 +34,7 @@ return require('packer').startup(function(use)
 	use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
 ------------------------------
--- commit = "b0395c2",
 
-  use{
-    'nvim-telescope/telescope.nvim',
-  }
-  use "nvim-telescope/telescope-media-files.nvim"
   --cmp and snippets
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
@@ -49,16 +44,19 @@ return require('packer').startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   --lsp 
-  use "neovim/nvim-lspconfig"
-
+  --
   --use "williamboman/nvim-lsp-installer"
+  use "neovim/nvim-lspconfig"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
-  use "nvim-treesitter/nvim-treesitter"
+
 
   --QOF
+  use {'nvim-treesitter/nvim-treesitter', commit="ed438691dfa47a9920f5d393b2217c98619f5432"}
+  use{'nvim-telescope/telescope.nvim',}
+  use "nvim-telescope/telescope-media-files.nvim"
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
   use "akinsho/toggleterm.nvim"
@@ -67,10 +65,14 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim"
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
-  use 'michaelrommel/nvim-silicon'
   use {'folke/trouble.nvim'}
+
+  --optional
+  use "ThePrimeagen/vim-be-good"
+
   --Themes
   use "biscuit-colorscheme/nvim"
+  use "Shatur/neovim-ayu"
   use "srcery-colors/srcery-vim"
   use "ajmwagar/vim-deus"
   use "sainnhe/sonokai"
@@ -83,9 +85,11 @@ return require('packer').startup(function(use)
   use "xero/miasma.nvim"
   use "jalzn/altbox.nvim"
   use "luisiacc/gruvbox-baby"
-
-
-  --optional
-    use "ThePrimeagen/vim-be-good"
+  use "sho-87/kanagawa-paper.nvim"
+  use {"cryptomilk/nightcity.nvim", style="afterlife", plugins="true", terminal_colors="true"} --styles= kabuki, ...
+  use 'Yazeed1s/oh-lucy.nvim'
+  use "kdheepak/monochrome.nvim"
+  use {"zootedb0t/citruszest.nvim",}
+  use "tiagovla/tokyodark.nvim"
 
 end)

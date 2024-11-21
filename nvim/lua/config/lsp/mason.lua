@@ -3,7 +3,11 @@ local defaultServers = {
  "rust_analyzer",
  "pyright",
  "cmake",
- "cssls"
+ "cssls",
+ "gopls",
+ "csharp_ls",
+ "bashls"
+
 }
 
 require("mason").setup()
