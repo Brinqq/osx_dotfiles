@@ -1,0 +1,15 @@
+ZSH_PROMPT_C_TIME="red"
+ZSH_PROMPT_C_BRANCH="red"
+ZSH_PROMPT_C_CMD_RESULT="green"
+
+ZSH_PROMPT_CB_1="yellow"
+
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b'
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+PROMPT='%Bin%b %B%F{'$ZSH_PROMPT_CB_1'}%1~%b %F{blue}(%f%B🌴%b%F{'$ZSH_PROMPT_C_BRANCH'}${vcs_info_msg_0_}%f%F{blue}) %F{green}≻ %f'
+RPROMPT='%B%F{'$ZSH_PROMPT_CB_1'}['$(echo $(ls -a | wc -l ))' Files Found] %f%b%B%F{'$ZSH_PROMPT_C_CMD_RESULT'}[%*]%f%b                     '
