@@ -9,6 +9,9 @@ packages=(
 "kitty"
 "yabai"
 "skhd"
+"eza"
+"bat"
+"sketchybar"
 )
 
 brew update
