@@ -3,12 +3,6 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 bg_color=0xff3e497f
 bd_color=0xffb72698
 req_top_most=false
-##### Bar Appearance #####
-# Configuring the general appearance of the bar.
-# These are only some of the options available. For all options see:
-# https://felixkratz.github.io/SketchyBar/config/bar
-# If you are looking for other colors, see the color picker:
-# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
 
 sketchybar --bar position=top height=40 blur_radius=10 color=$bg_color border_color=$bd_color topmost=$req_top_most shadow=true sticky=true border_width=0 corner_radius=10
 
@@ -66,7 +60,7 @@ sketchybar --add item chevron left \
            --subscribe front_app front_app_switched
 
 ##### Adding Right Items #####
-# In the same way as the left items we can add items to the right side.
+#: In the same way as the left items we can add items to the right side.
 # Additional position (e.g. center) are available, see:
 # https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
 
