@@ -6,12 +6,14 @@
 #   required keys to be configured: 
 #     [executable] - path to exe relative to projects root directory
 #   opt keys:
+#     [env] - important env variables
 
 #TODO: add error info for parsing lldb file
 
 root_dir=$1
 file="$root_dir/debug/lldbinfo"
 executable_path=
+env_var=
 
 if [ ! -e "$root_dir/debug/lldbinfo" ]; then
   echo "lldb info file not found!"
@@ -23,7 +25,17 @@ fi
 while IFS=": " read -r key value; do
   if [ "$key" = "executable" ]; then
     executable_path=$value
+    continue;
   fi
+
+  if [ "$key" = "env" ]; then
+    env_var+="$value "
+    continue;
+  fi
+
 done < $file
 
 tmux split-window -h "lldb $root_dir/$executable_path; exit"
+for i in ${env_var[*]}; do
+  tmux send-keys "settings set target.env-vars $i" c-m
+done
