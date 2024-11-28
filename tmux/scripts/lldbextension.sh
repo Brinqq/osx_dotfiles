@@ -14,6 +14,7 @@ root_dir=$1
 file="$root_dir/debug/lldbinfo"
 executable_path=
 env_var=
+settings=
 
 if [ ! -e "$root_dir/debug/lldbinfo" ]; then
   echo "lldb info file not found!"
@@ -27,15 +28,21 @@ while IFS=": " read -r key value; do
     executable_path=$value
     continue;
   fi
-
   if [ "$key" = "env" ]; then
     env_var+="$value "
     continue;
   fi
-
+  if [ "$key" = "setting" ]; then
+    settings+="$value "
+  fi
 done < $file
 
 tmux split-window -h "lldb $root_dir/$executable_path; exit"
 for i in ${env_var[*]}; do
   tmux send-keys "settings set target.env-vars $i" c-m
 done
+
+for ((i=0; i<${#settings[@]}; i+=2)); do
+  tmux send-keys "settings set ${settings[i]} ${settings[i+1]}" c-m
+done
+tmux send-keys c-l
