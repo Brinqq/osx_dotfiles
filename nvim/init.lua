@@ -14,5 +14,7 @@ require "config.comment"
 require "config.cmp"
 require "config.lsp"
 require "config.trouble"
-
 require "config.leetcode"
+
+-- Custom Plugins private for now (while learning how to create plugins)
+require "config.internals"
