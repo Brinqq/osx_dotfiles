@@ -20,10 +20,15 @@ km("n", "<C-Right>", ":vertical resize -2<CR>", opt)
 -- key optimization
 km("n", "<n>", "nzzzv", opt)
 km("n", "<N>", "Nzzzv", opt)
-km("n", "J", "<C-d>zz", opt)
-km("n", "K", "<C-u>zz", opt)
+km("n", "C-d", "<C-d>zz", opt)
+km("n", "C-u", "<C-u>zz", opt)
 km("x", "<leader>p", "\"_dP", opt)
 km("n", ".", "<cmd> noh<cr>", opt)
+
+-- quick fix
+km("n", "<M-;>", "<cmd> cnext<cr>", opt)
+km("n", "<M-,>", "<cmd> cprevious<cr>", opt)
+km("n", "<M-m>", "<cmd> ccl<cr>", opt)
 
 --move visual block vertically and horizontaly
 km("v", "J", ":m '>+1<CR>gv=gv")

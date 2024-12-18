@@ -54,7 +54,7 @@ return require('packer').startup(function(use)
 
 
   --QOF
-  use {'nvim-treesitter/nvim-treesitter', commit="ed438691dfa47a9920f5d393b2217c98619f5432"}
+  use {'nvim-treesitter/nvim-treesitter',}
   use{'nvim-telescope/telescope.nvim',}
   use "nvim-telescope/telescope-media-files.nvim"
   use "kyazdani42/nvim-tree.lua"
@@ -67,8 +67,13 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use {'folke/trouble.nvim'}
 
+
+  -- leetcode intergration(might remove we will see)
+  use {"kawre/leetcode.nvim", build = ".TSUpdate html",}
+
+  use "MunifTanjim/nui.nvim"
+
   --optional
-  use "ThePrimeagen/vim-be-good"
 
   --Themes
   use "biscuit-colorscheme/nvim"
@@ -91,5 +96,4 @@ return require('packer').startup(function(use)
   use "kdheepak/monochrome.nvim"
   use {"zootedb0t/citruszest.nvim",}
   use "tiagovla/tokyodark.nvim"
-
 end)

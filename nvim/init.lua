@@ -14,3 +14,5 @@ require "config.comment"
 require "config.cmp"
 require "config.lsp"
 require "config.trouble"
+
+require "config.leetcode"
