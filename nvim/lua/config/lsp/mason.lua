@@ -4,7 +4,8 @@ local defaultServers = {
  "pyright",
  "bashls",
  "glsl_analyzer",
- "asm_lsp"
+ "asm_lsp",
+ "cssls"
 }
 
 require("mason").setup()
