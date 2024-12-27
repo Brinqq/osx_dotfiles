@@ -1,4 +1,4 @@
-vim.cmd("colorscheme ayu")
+vim.cmd("colorscheme kanagawa-paper")
 
 
 ---#const line numbers for consistent jumps
