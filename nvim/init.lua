@@ -16,5 +16,7 @@ require "config.lsp"
 require "config.trouble"
 require "config.leetcode"
 
+require "config.debug"
+
 -- Custom Plugins private for now (while learning how to create plugins)
 require "config.internals"

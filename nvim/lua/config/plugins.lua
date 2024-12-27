@@ -67,10 +67,16 @@ return require('packer').startup(function(use)
   use 'ThePrimeagen/harpoon'
   use {'folke/trouble.nvim'}
 
+  --debugger
+  use {'mfussenegger/nvim-dap',
 
+    requires = {"rcarriga/nvim-dap-ui",
+      {"nvim-neotest/nvim-nio"}
+    }
+  }
+  --
   -- leetcode intergration(might remove we will see)
   use {"kawre/leetcode.nvim", build = ".TSUpdate html",}
-
   use "MunifTanjim/nui.nvim"
 
   --optional
