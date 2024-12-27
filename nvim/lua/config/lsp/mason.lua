@@ -17,7 +17,7 @@ local opts = {}
 
 m.setup{
   ensure_installed = {
-    "clangd", "rust_analyzer", "lua_ls", "pyright", "cmake", "cssls"
+    "clangd", "rust_analyzer", "lua_ls", "pyright", "cmake", "cssls",
   },
   automatic_install = true,
 }
