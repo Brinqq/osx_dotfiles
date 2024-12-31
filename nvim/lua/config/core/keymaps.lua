@@ -28,7 +28,6 @@ km("n", ".", "<cmd> noh<cr>", opt)
 -- quick fix
 km("n", "<M-;>", "<cmd> cnext<cr>", opt)
 km("n", "<M-,>", "<cmd> cprevious<cr>", opt)
-km("n", "<M-m>", "<cmd> ccl<cr>", opt)
 
 --move visual block vertically and horizontaly
 km("v", "J", ":m '>+1<CR>gv=gv")
@@ -52,7 +51,6 @@ km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
 km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)
 km("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", opt)
 km("n", "<leader>fs", "<cmd> Telescope live_grep <cr>", opt)
-km("n", "<leader>fc", "<cmd> Telescope colorscheme <cr>", opt)
 
 --nvim-tree
 km("n", "<leader>e",  ":NvimTreeToggle<cr>", opt)

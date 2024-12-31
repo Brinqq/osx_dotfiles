@@ -59,13 +59,11 @@ return require('packer').startup(function(use)
   use "nvim-telescope/telescope-media-files.nvim"
   use "kyazdani42/nvim-tree.lua"
   use "kyazdani42/nvim-web-devicons"
-  use "akinsho/toggleterm.nvim"
   use "nvim-lualine/lualine.nvim"
   use "windwp/nvim-autopairs"
   use "lewis6991/gitsigns.nvim"
   use 'numToStr/Comment.nvim'
   use 'ThePrimeagen/harpoon'
-  use {'folke/trouble.nvim'}
 
   --debugger
   use {'mfussenegger/nvim-dap',
@@ -82,24 +80,32 @@ return require('packer').startup(function(use)
   --optional
 
   --Themes
-  use "biscuit-colorscheme/nvim"
-  use "Shatur/neovim-ayu"
-  use "srcery-colors/srcery-vim"
-  use "ajmwagar/vim-deus"
-  use "sainnhe/sonokai"
-  use "ku1ik/vim-monokai"
-  use "tomasr/molokai"
-  use "sebasruiz09/fizz.nvim"
-  use "ricardoraposo/gruvbox-minor.nvim"
-  use "sainnhe/gruvbox-material"
-  use "morhetz/gruvbox"
-  use "xero/miasma.nvim"
-  use "jalzn/altbox.nvim"
-  use "luisiacc/gruvbox-baby"
-  use "sho-87/kanagawa-paper.nvim"
-  use {"cryptomilk/nightcity.nvim", style="afterlife", plugins="true", terminal_colors="true"} --styles= kabuki, ...
-  use 'Yazeed1s/oh-lucy.nvim'
-  use "kdheepak/monochrome.nvim"
-  use {"zootedb0t/citruszest.nvim",}
-  use "tiagovla/tokyodark.nvim"
+    use "bluz71/vim-moonfly-colors"
+    use "sho-87/kanagawa-paper.nvim"
+    use "ilof2/posterpole.nvim"
+    use "Abstract-IDE/Abstract-cs"
+    use "savq/melange-nvim"
+
+  -- use "vim-scripts/twilight256.vim"
+  -- use "nonetallt/vim-neon-dark"
+  -- use "biscuit-colorscheme/nvim"
+  -- use "Shatur/neovim-ayu"
+  -- use "srcery-colors/srcery-vim"
+  -- use "ajmwagar/vim-deus"
+  -- use "sainnhe/sonokai"
+  -- use "ku1ik/vim-monokai"
+  -- use "tomasr/molokai"
+  -- use "sebasruiz09/fizz.nvim"
+  -- use "ricardoraposo/gruvbox-minor.nvim"
+  -- use "sainnhe/gruvbox-material"
+  -- use "morhetz/gruvbox"
+  -- use "xero/miasma.nvim"
+  -- use "jalzn/altbox.nvim"
+  -- use "luisiacc/gruvbox-baby"
+
+  -- use {"cryptomilk/nightcity.nvim", style="afterlife", plugins="true", terminal_colors="true"} --styles= kabuki, ...
+  -- use 'Yazeed1s/oh-lucy.nvim'
+  -- use "kdheepak/monochrome.nvim"
+  -- use {"zootedb0t/citruszest.nvim",}
+  -- use "tiagovla/tokyodark.nvim"
 end)
