@@ -51,6 +51,7 @@ km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
 km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)
 km("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", opt)
 km("n", "<leader>fs", "<cmd> Telescope live_grep <cr>", opt)
+km("n", "<leader>fc", "<cmd> Telescope colorscheme <cr>", opt)
 
 --nvim-tree
 km("n", "<leader>e",  ":NvimTreeToggle<cr>", opt)
