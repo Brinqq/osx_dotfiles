@@ -80,12 +80,16 @@ return require('packer').startup(function(use)
   --optional
 
   --Themes
-    use "bluz71/vim-moonfly-colors"
-    use "sho-87/kanagawa-paper.nvim"
-    use "ilof2/posterpole.nvim"
-    use "Abstract-IDE/Abstract-cs"
-    use "savq/melange-nvim"
-
+  use "iibe/gruvbox-high-contrast"
+  use "sainnhe/gruvbox-material"
+  -- use "sample-usr/rakis.nvim"
+  -- use "sho-87/kanagawa-paper.nvim"
+  -- use "ilof2/posterpole.nvim"
+  -- use "Abstract-IDE/Abstract-cs"
+  -- use "savq/melange-nvim"
+  -- use "DryLabRebel/Squire"
+  -- use "DryLabRebel/Squire"
+  -- use "water-sucks/darkrose.nvim"
   -- use "vim-scripts/twilight256.vim"
   -- use "nonetallt/vim-neon-dark"
   -- use "biscuit-colorscheme/nvim"
@@ -97,12 +101,10 @@ return require('packer').startup(function(use)
   -- use "tomasr/molokai"
   -- use "sebasruiz09/fizz.nvim"
   -- use "ricardoraposo/gruvbox-minor.nvim"
-  -- use "sainnhe/gruvbox-material"
   -- use "morhetz/gruvbox"
   -- use "xero/miasma.nvim"
   -- use "jalzn/altbox.nvim"
   -- use "luisiacc/gruvbox-baby"
-
   -- use {"cryptomilk/nightcity.nvim", style="afterlife", plugins="true", terminal_colors="true"} --styles= kabuki, ...
   -- use 'Yazeed1s/oh-lucy.nvim'
   -- use "kdheepak/monochrome.nvim"
