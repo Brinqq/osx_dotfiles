@@ -3,39 +3,14 @@ require("mason-lspconfig").setup()
 
 local lspconfig = require("lspconfig")
 local m = require"mason-lspconfig"
-local opts = {}
 
-local defaultServers = {
- "clangd",
- "rust_analyzer",
- "pyright",
- "bashls",
- "glsl_analyzer",
- "asm_lsp",
- "cssls"
-}
+local default_opts = {on_attach = require("config.lsp.handler").on_attach, capabilities = require("config.lsp.handler").capabilities }
 
-m.setup{
-  ensure_installed = {
-    "clangd", "rust_analyzer", "lua_ls", "pyright", "cmake", "cssls",
-  },
-  automatic_install = true,
-}
-
-for _, server in pairs(defaultServers) do opts = {
-  on_attach = require("config.lsp.handler").on_attach,
-  capabilities = require("config.lsp.handler").capabilities
-}
-
-server = vim.split(server, "@")[1]
-lspconfig[server].setup(opts)
-end
-
-lspconfig.lua_ls.setup{
+local lua_ls_opts = {
   on_attach = require("config.lsp.handler").on_attach,
   capabilities = require("config.lsp.handler").capabilities,
   settings = {
-    ['lua-language-server'] = {
+    Lua = {
       diagnostics = {
         globals = { "vim" },
       },
@@ -45,4 +20,24 @@ lspconfig.lua_ls.setup{
     },
   },
 }
+
+
+local defaultServers = {
+  {server = "clangd", opts = default_opts},
+  {server = "rust_analyzer", opts = default_opts},
+  {server = "pyright", opts = default_opts},
+  {server = "bashls", opts = default_opts},
+  {server = "glsl_analyzer", opts = default_opts},
+  {server = "asm_lsp", opts = default_opts},
+  {server = "cssls", opts = default_opts},
+  {server = "lua_ls", opts = lua_ls_opts}
+}
+
+m.setup{
+
+}
+
+for _, server in pairs(defaultServers) do 
+lspconfig[server.server].setup(server.opts)
+end
 
