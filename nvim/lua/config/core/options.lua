@@ -1,5 +1,5 @@
 --short map
-o = vim.opt
+local o = vim.opt
 
 o.termguicolors = true  -- Sets term gui colors
 o.number = true         -- Sets numbers on
