@@ -1,7 +1,8 @@
 require("dap")
 
 --Preallocate 10 slots
-local colors = {nil, nil, nil, nil, nil, nil, nil, nil};
+local colors = {{}, {}, {}, {}, {}, {}, '',};
+
 local function get_colors()
   colors[1] = vim.api.nvim_get_hl(0, {name = "Normal", link = false, create = false})
   colors[2] = vim.api.nvim_get_hl(0, {name = "@keyword", link = false, create = false})
