@@ -1,3 +1,4 @@
+require "config.internals"
 require "config.plugins"
 
 require "config.core"
@@ -13,4 +14,4 @@ require "config.harpoon"
 require "config.comment"
 require "config.leetcode"
 
-require "config.internals"
+
