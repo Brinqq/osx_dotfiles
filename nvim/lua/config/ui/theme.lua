@@ -1,44 +1,48 @@
 require("dap")
-vim.cmd("colorscheme posterpole")
 
---Const Highlights groups and colors due to some color schemes have weird colors.
---
-local COLOR_ONE = "#ff5454"
-local COLOR_TWO = "#E65100"
-local COLOR_THREE = "#257DC3"
-local COLOR_FOUR = "#ffffff"
-local COLOR_FIVE = "#870087"
-local COLOR_SIX = "#878700"
+--Preallocate 10 slots
+local colors = {nil, nil, nil, nil, nil, nil, nil, nil};
+local function get_colors()
+  colors[1] = vim.api.nvim_get_hl(0, {name = "Normal", link = false, create = false})
+  colors[2] = vim.api.nvim_get_hl(0, {name = "@keyword", link = false, create = false})
+  colors[3] = vim.api.nvim_get_hl(0, {name = "@number", link = false, create = false})
+  colors[4] = vim.api.nvim_get_hl(0, {name = "@variable.member", link = false, create = false})
+  colors[5] = vim.api.nvim_get_hl(0, {name = "@function", link = false, create = false})
+  colors[6] = vim.api.nvim_get_hl(0, {name = "@type.builtin", link = false, create = false})
+  colors[7] = "#ebdbb2"
+end
 
+function ECC()
+  get_colors();
 
-function Enable_const_colors()
+  --Core Theme
+  vim.api.nvim_set_hl(0, 'LineNr', {fg = colors[2].fg, bold = true})
+  vim.api.nvim_set_hl(0, 'Comment', {fg = "#a7a7a7", italic = true})
+
+  --Debugger Theme
+  vim.api.nvim_set_hl(0, 'DapUIDecoration', {fg = colors[2].fg})
+  vim.api.nvim_set_hl(0, 'DapUIScope', {fg = colors[2].fg})
+  vim.api.nvim_set_hl(0, 'DapUIType', {fg = colors[2].fg})
+  vim.api.nvim_set_hl(0, 'DapUISource', {fg = colors[2].fg})
+  vim.api.nvim_set_hl(0, 'DapUIVariable', {fg = colors[6].fg})
+  vim.api.nvim_set_hl(0, 'DapUICurrentFrameName', {fg = colors[5].fg})
+  vim.api.nvim_set_hl(0, 'DapUIModifiedValue', {fg = colors[5].fg})
+  vim.api.nvim_set_hl(0, 'DapUIThread', {fg = colors[5].fg})
+  vim.api.nvim_set_hl(0, 'DapBreakpointStoppedSymbol', {fg = colors[6].fg, bold=true})
+  vim.api.nvim_set_hl(0, 'DapBreakpoint', {fg = colors[6].fg, bold=true})
+  vim.api.nvim_set_hl(0, 'DapUIFloatBorder', {fg = colors[2].fg,})
+  vim.api.nvim_set_hl(0, 'DapUIFloatNormal', {bg = colors[1].bg,})
+  vim.api.nvim_set_hl(0, 'DapUIBreakpointsPath', { fg = colors[4].fg, italic=true})
+  vim.api.nvim_set_hl(0, 'DapUIBreakpointsLine', { fg = colors[3].fg, bg = colors[2].bg})
+  vim.cmd(string.format("exe 'highlight DapUIValue guifg=%s'", colors[7]))
+  vim.cmd(string.format("exe 'highlight DapUIStoppedThread guifg=%s'", colors[7]))
+  vim.cmd(string.format("exe 'highlight DapUILineNumber guifg=%s'", colors[7]))
+  vim.cmd(string.format("exe 'highlight DapUIFrameName guifg=%s'", colors[7]))
+
   local sign = vim.fn.sign_define
-  vim.cmd(string.format("exe 'highlight LineNr guifg=%s'", COLOR_ONE))
-  vim.cmd(string.format("exe 'highlight DapUIDecoration guifg=%s'", COLOR_ONE))
-  vim.cmd(string.format("exe 'highlight DapUIScope guifg=%s'", COLOR_ONE))
-  vim.cmd(string.format("exe 'highlight DapUIType guifg=%s'", COLOR_ONE))
-  vim.cmd(string.format("exe 'highlight DapUISource guifg=%s'", COLOR_ONE))
-  vim.cmd(string.format("exe 'highlight DapUIVariable guifg=%s'", COLOR_TWO))
-  vim.cmd(string.format("exe 'highlight DapUIFrameName guifg=%s'", COLOR_FOUR))
-  vim.cmd(string.format("exe 'highlight DapUICurrentFrameName guifg=%s'", COLOR_THREE))
-  vim.cmd(string.format("exe 'highlight DapUIModifiedValue guifg=%s'", COLOR_THREE))
-  vim.cmd(string.format("exe 'highlight DapUILineNumber guifg=%s'", COLOR_FOUR))
-  vim.cmd(string.format("exe 'highlight DapUIValue guifg=%s'", COLOR_FOUR))
-  vim.cmd(string.format("exe 'highlight DapUIThread guifg=%s'", COLOR_THREE))
-  vim.cmd(string.format("exe 'highlight DapUIStoppedThread guifg=%s'", COLOR_FOUR))
-
-  vim.api.nvim_set_hl(0, 'DapBreakpointStoppedSymbol', {fg = COLOR_TWO, bold=true})
-  vim.api.nvim_set_hl(0, 'DapBreakpoint', {fg = COLOR_TWO, bold=true})
   sign('DapStopped', { text='', texthl='DapBreakpointStoppedSymbol', linehl='', numhl=''})
   sign('DapBreakpoint', {text= "B", texthl='DapBreakpoint',})
 end
 
-
-
-
-Enable_const_colors()
-
-
-
-
-vim.keymap.set("n", "<leader>fc", function() vim.cmd("Telescope colorscheme") end, {noremap = true}, {silent = true})
+vim.cmd("colorscheme gruvbox-material")
+ECC()
