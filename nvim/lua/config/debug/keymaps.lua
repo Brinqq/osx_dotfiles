@@ -3,6 +3,7 @@ local opts = {noremap = true, silent = true}
 
 local ui = require("dapui")
 local dap = require("dap")
+local server = require("config.debug.servers")
 
 km("n", "<M-n>", function() ui.toggle() end)
 km('n', '<M-0>', function() dap.continue() end, opts)
@@ -20,6 +21,32 @@ km('n', '<M-/>', function() ui.float_element("watches", {width = 100, height = 3
 
 km('n', '<M-l>', function() ui.eval() end, opts)
 km('v', '<M-l>', function() ui.eval() end, opts)
+
+
+km('n', '<m-,>', function()
+  local l = vim.fn.expand('<cword>')
+  local decimal_value = vim.fn.str2nr(l, 16)
+  print(decimal_value)
+
+end, opts)
+
+
+
+km('n', '<M-9>', function()
+  local compile = Get_debug_settings().compile
+    if(compile ~= nil) then
+      vim.fn.system("./".. compile)
+      if(vim.v.shell_error ~= 0) then
+        print("compilation error!")
+        goto skip;
+      end
+      dap.continue()
+    else 
+      print("Compile Script = nil")
+    end
+    ::skip::
+  end, opts)
+
 
 km('n', '<M-d>', function()
   dap.repl.execute("disassemble")
