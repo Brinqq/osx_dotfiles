@@ -21,6 +21,21 @@ local lua_ls_opts = {
   },
 }
 
+local rust_opts = {
+  on_attach = require("config.lsp.handler").on_attach,
+  capabilities = require("config.lsp.handler").capabilities,
+  settings = {
+    Rust = {
+      diagnostics = {
+        disabled = {
+          "unlinked-file",
+        },
+      },
+
+    },
+  },
+}
+
 
 local defaultServers = {
   {server = "clangd", opts = default_opts},
