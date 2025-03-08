@@ -45,5 +45,6 @@ function ECC()
   sign('DapBreakpoint', {text= "B", texthl='DapBreakpoint',})
 end
 
-vim.cmd("colorscheme gruvbox-material")
+
+vim.cmd("colorscheme tokyodark")
 ECC()
