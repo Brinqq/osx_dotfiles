@@ -27,6 +27,10 @@ repl.commands = vim.tbl_extend("force", repl.commands, {
     ['mrd'] = function(text)
       repl.execute(string.format("memory read --format f --size 8 --count 1 %s", text));
       end,
+
+    ['mrp'] = function(text)
+      repl.execute(string.format("memory read --format h --size 8 --count 1 %s", text));
+      end,
   }
 
 
