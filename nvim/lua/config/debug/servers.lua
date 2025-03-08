@@ -1,5 +1,6 @@
 local dap = require("dap")
 local ui = require('dapui')
+local repl = require('dap.repl')
 
 local mason_bin = vim.fn.stdpath('data') .. '/mason/bin/'
 local custom_dap_bin = nil;
@@ -62,9 +63,13 @@ dap.configurations.cpp = {
     type = 'lldb',
     request = 'launch',
     program = function()
-        return (debugger_settings.program == nil) and debugger_settings.program or vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+        return (debugger_settings.program ~= nil) and debugger_settings.program or vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
     cwd = '${workspaceFolder}',
+
+    stdout = function(text)
+      -- repl.append(text);
+    end,
 
     env = {
       DYLD_LIBRARY_PATH=vim.fn.expand("~").. "/programming/vulkan/macOS/lib",
