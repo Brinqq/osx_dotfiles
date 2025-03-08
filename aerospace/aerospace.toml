@@ -1,0 +1,69 @@
+start-at-login = true
+
+ # enable-normalization-flatten-containers = true
+ # enable-normalization-opposite-orientation-for-nested-containers = false
+ #
+ # default-root-container-layout = 'tiles'
+ #
+ # default-root-container-orientation = 'auto'
+ # on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+ automatically-unhide-macos-hidden-apps = true
+
+[key-mapping]
+  preset = "qwerty"
+
+
+[gaps]
+    inner.horizontal = 10
+    inner.vertical   = 10
+    outer.left       = 25
+    outer.bottom     = 25
+    outer.top        = 25
+    outer.right      = 25
+
+[mode.main.binding]
+    cmd-s = 'mode service'
+    cmd-r = 'mode resize'
+
+    cmd-h = 'focus left'
+    cmd-j = 'focus down'
+    cmd-k = 'focus up'
+    cmd-l = 'focus right'
+
+    cmd-shift-h = 'move left'
+    cmd-shift-j = 'move down'
+    cmd-shift-k = 'move up'
+    cmd-shift-l = 'move right'
+
+    alt-1 = 'workspace 1'
+    alt-2 = 'workspace 2'
+    alt-3 = 'workspace 3'
+    alt-4 = 'workspace 4'
+    alt-5 = 'workspace 5'
+    alt-6 = 'workspace 6'
+    alt-7 = 'workspace 7'
+    alt-8 = 'workspace 8'
+
+    alt-shift-1 = 'move-node-to-workspace 1'
+    alt-shift-2 = 'move-node-to-workspace 2'
+    alt-shift-3 = 'move-node-to-workspace 3'
+    alt-shift-4 = 'move-node-to-workspace 4'
+    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-6 = 'move-node-to-workspace 6'
+    alt-shift-8 = 'move-node-to-workspace 8'
+
+    cmd-i = 'balance-sizes'
+
+
+[mode.service.binding]
+    r = ['reload-config', 'mode main']
+    esc = 'mode main'
+  
+
+[mode.resize.binding]
+    h = 'resize width  -50'
+    j = 'resize height +50'
+    k = 'resize height -50'
+    l = 'resize width  +50'
+    enter = 'mode main'
+    esc   = 'mode main'
