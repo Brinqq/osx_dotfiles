@@ -17,6 +17,7 @@ o.splitbelow = true
 o.splitright = true
 o.numberwidth = 4
 o.wrap = false
+o.scrolloff = 10
 
 
 vim.cmd"set matchpairs="
