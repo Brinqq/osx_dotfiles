@@ -1,7 +1,0 @@
-.root{
-    --outline: #ff4d4d
-}
-
-.browser-toolbar{
-    color: var(--outline);
-}
