@@ -13,5 +13,6 @@ require "config.autopairs"
 require "config.harpoon"
 require "config.comment"
 require "config.leetcode"
+require "config.marks"
 
 
