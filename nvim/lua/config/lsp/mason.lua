@@ -39,7 +39,7 @@ local rust_opts = {
 
 local defaultServers = {
   {server = "clangd", opts = default_opts},
-  {server = "rust_analyzer", opts = default_opts},
+  {server = "rust_analyzer", opts = rust_opts},
   {server = "pyright", opts = default_opts},
   {server = "bashls", opts = default_opts},
   {server = "glsl_analyzer", opts = default_opts},
