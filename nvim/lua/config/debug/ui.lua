@@ -1,7 +1,7 @@
 local ui = require("dapui")
-local dap = require("dap")
 
-local config = {
+
+local uiconfig = {
     layouts = {
 
       {
@@ -17,6 +17,6 @@ local config = {
 
 
 
-ui.setup(config)
+ui.setup(uiconfig)
 
 
