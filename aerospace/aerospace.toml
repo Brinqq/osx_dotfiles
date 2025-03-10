@@ -14,15 +14,15 @@ start-at-login = true
 
 
 [gaps]
-    inner.horizontal = 10
-    inner.vertical   = 10
+    inner.horizontal = 3
+    inner.vertical   = 3
     outer.left       = 25
     outer.bottom     = 25
     outer.top        = 25
     outer.right      = 25
 
 [mode.main.binding]
-    cmd-s = 'mode service'
+    cmd-e = 'mode service'
     cmd-r = 'mode resize'
 
     cmd-h = 'focus left'
@@ -52,8 +52,15 @@ start-at-login = true
     alt-shift-6 = 'move-node-to-workspace 6'
     alt-shift-8 = 'move-node-to-workspace 8'
 
-    cmd-i = 'balance-sizes'
 
+    cmd-g = "join-with right"
+    cmd-f = "join-with up"
+    cmd-d = "join-with down"
+    cmd-s = "join-with left"
+
+    cmd-b = 'balance-sizes'
+    cmd-semicolon = 'fullscreen'
+ 
 
 [mode.service.binding]
     r = ['reload-config', 'mode main']
