@@ -14,5 +14,4 @@ require "config.harpoon"
 require "config.comment"
 require "config.leetcode"
 require "config.marks"
-
-
+require "config.latex"
