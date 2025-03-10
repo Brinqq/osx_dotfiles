@@ -1,0 +1,7 @@
+set database sqlite
+
+# set recolor-keephue
+set recolor 
+set recolor-lightcolor "#191724"
+set default-bg "#191724"
+set default-fg "#E5D0AC"
