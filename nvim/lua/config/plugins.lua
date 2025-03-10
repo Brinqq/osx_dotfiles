@@ -64,6 +64,9 @@ return require('packer').startup(function(use)
   use {'numToStr/Comment.nvim', commit = "e30b7f2008e52442154b66f7c519bfd2f1e32acb"}
   use {'ThePrimeagen/harpoon', commit = "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3" }
   use {"chentoast/marks.nvim", commit = "bb25ae3f65f504379e3d08c8a02560b76eaf91e8"}
+  use {"lervag/vimtex", commit = "cf6b84775624582d7422715ee46b0a63b53cee38", config = function() Latex_init()end, }
+  use ("xiyaowong/transparent.nvim")
+
 
   --debugger
   use {'mfussenegger/nvim-dap',

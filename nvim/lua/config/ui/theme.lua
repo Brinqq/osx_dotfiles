@@ -43,8 +43,16 @@ function ECC()
   local sign = vim.fn.sign_define
   sign('DapStopped', { text='', texthl='DapBreakpointStoppedSymbol', linehl='', numhl=''})
   sign('DapBreakpoint', {text= "B", texthl='DapBreakpoint',})
+
 end
 
-
 vim.cmd("colorscheme tokyodark")
-ECC()
+require("transparent").setup({
+  groups = {
+    'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+    'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText', 'SignColumn', 'CursorLine', 'CursorLineNr', 'StatusLine', 'StatusLineNC',
+    'EndOfBuffer',},
+  extra_groups = {},
+  exclude_groups = {},
+  on_clear = function() ECC() end,
+})
