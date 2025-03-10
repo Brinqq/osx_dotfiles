@@ -1,9 +1,9 @@
-tree = require "nvim-tree"
+require "config.core.global"
+local tree = require "nvim-tree"
 
 tree.setup({
-
   filters = {
-    git_ignored = false, 
+    git_ignored = false,
   },
 
   actions = {
@@ -11,3 +11,5 @@ tree.setup({
   },
 
 })
+
+Km("n", "<leader>e",  ":NvimTreeToggle<cr>", Km_opts)

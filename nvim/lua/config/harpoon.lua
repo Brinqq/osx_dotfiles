@@ -1,11 +1,10 @@
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
---
+local mark = require "harpoon.mark"
+local ui = require "harpoon.ui"
 
---harpoon
-vim.keymap.set("n","<leader>j", mark.add_file)
-vim.keymap.set("n", "<leader>h", mark.rm_file)
-vim.keymap.set("n", "<leader>g", ui.toggle_quick_menu)
+vim.keymap.set("n", "<leader>ha", mark.add_file)
+vim.keymap.set("n", "<leader>hd", mark.rm_file)
+vim.keymap.set("n", "<leader>hc", mark.clear_all)
+vim.keymap.set("n", "<leader>hf", ui.toggle_quick_menu)
 
 vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)

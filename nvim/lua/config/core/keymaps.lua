@@ -34,28 +34,3 @@ km("v", "J", ":m '>+1<CR>gv=gv")
 km("v", "K", ":m '<-2<CR>gv=gv")
 km("v", "H", "<gv", opt)
 km("v", "L", ">gv", opt)
-
---quick replace current word
-
---imporved mark keybinds
-
--------Plugin maps-----------------
-
---Trouble
--- km("n", ".", function() require('trouble').toggle("document_diagnostics") end)
-
-
---telescope
-km("n", "L", "<cmd> Telescope git_files <cr>", opt)
-km("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opt)
-km("n", "<leader>fb", "<cmd> Telescope git_branches <cr>", opt)
-km("n", "<leader>fk", "<cmd> Telescope keymaps <cr>", opt)
-km("n", "<leader>fs", "<cmd> Telescope live_grep <cr>", opt)
-km("n", "<leader>fc", "<cmd> Telescope colorscheme <cr>", opt)
-
---nvim-tree
-km("n", "<leader>e",  ":NvimTreeToggle<cr>", opt)
-
---theme
-km("n", "<leader>rb","<cmd> lua rb() <CR>", opt)
-
