@@ -1,7 +1,6 @@
 ZSH_PROMPT_C_TIME="red"
 ZSH_PROMPT_C_BRANCH="red"
 ZSH_PROMPT_C_CMD_RESULT="green"
-
 ZSH_PROMPT_CB_1="yellow"
 
 

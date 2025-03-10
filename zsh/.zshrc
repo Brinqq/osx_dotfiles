@@ -2,13 +2,16 @@ ZINIT_HOME="$HOME/.config/zsh/zinit/zinit.git"
 ZSH_THEME="$HOME/.config/zsh/.zshtheme"
 EDITOR="nvim"
 
+export PATH=$PATH:$HOME/.bin
+export XDG_CONFIG_HOME=$HOME/.config
+export EDITOR=/opt/homebrew/bin/nvim
+
 # Aliases
-alias conf="cd $HOME/.config"
+alias conf="cd $XDG_CONFIG_HOME"
 alias zshrc="$EDITOR $HOME/.config/zsh/.zshrc"
 alias proj="cd $HOME/.dev/projects"
 alias ls="eza"
 alias cat="bat"
-
 
 if [ ! -d "$ZINIT_HOME" ]; then
   mkdir -p "$(dirname $ZINIT_HOME)"
