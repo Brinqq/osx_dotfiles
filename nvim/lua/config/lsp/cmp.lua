@@ -18,18 +18,18 @@ Cmp_toggle = true;
 
 local kind_icons = {
   Text = "",
-  Method = "m",
-  Function = "",
+  Method = "M",
+  Function = "F",
   Constructor = "",
   Field = "",
   Variable = "",
-  Class = "",
-  Interface = "",
+  Class = "C",
+  Interface = "I",
   Module = "",
   Property = "",
   Unit = "",
   Value = "",
-  Enum = "",
+  Enum = "E",
   Keyword = "",
   Snippet = "",
   Color = "",
@@ -58,7 +58,6 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
-
 
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -103,6 +102,7 @@ cmp.setup {
       "s",
     }),
   },
+
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)

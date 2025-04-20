@@ -46,7 +46,7 @@ function ECC()
 
 end
 
-vim.cmd("colorscheme tokyodark")
+vim.cmd("colorscheme gruvbox-baby")
 require("transparent").setup({
   groups = {
     'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier', 'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',

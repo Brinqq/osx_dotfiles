@@ -1,8 +1,4 @@
-
 require('gitsigns').setup{
-  signs = {
-    delete = "-"
-  };
-
+  signs = { delete = "-" };
   numhl = false,
 }

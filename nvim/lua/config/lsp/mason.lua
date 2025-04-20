@@ -43,9 +43,11 @@ local defaultServers = {
   {server = "pyright", opts = default_opts},
   {server = "bashls", opts = default_opts},
   {server = "glsl_analyzer", opts = default_opts},
-  {server = "asm_lsp", opts = default_opts},
+  -- {server = "asm_lsp", opts = default_opts},
   {server = "cssls", opts = default_opts},
-  {server = "lua_ls", opts = lua_ls_opts}
+  {server = "lua_ls", opts = lua_ls_opts},
+  {server = "gopls", opts = default_opts},
+
 }
 
 m.setup{
